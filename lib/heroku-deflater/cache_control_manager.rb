@@ -14,7 +14,7 @@ module HerokuDeflater
         app.config.public_file_server.headers ||= {}
         app.config.public_file_server.headers['Cache-Control'] ||= cache_control
       else
-        app.config.static_cache_control = cache_control
+        app.config.static_cache_control ||= cache_control
       end
     end
 
